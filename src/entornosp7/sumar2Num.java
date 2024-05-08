@@ -1,5 +1,3 @@
-package entornosp7;
-
 import java.util.Scanner;
 
 public class sumar2Num {
@@ -18,10 +16,23 @@ public class sumar2Num {
         // Sumar los dos números ingresados
         double suma = numero1 + numero2;
 
-        // Mostrar el resultado
+        // Mostrar el resultado de la suma
         System.out.println("La suma de " + numero1 + " y " + numero2 + " es: " + suma);
+
+        // Verificar si la suma es un número entero
+        if (esEntero(suma)) {
+            System.out.println("La suma es un número entero.");
+        } else {
+            System.out.println("La suma no es un número entero.");
+        }
 
         // Cerrar el objeto Scanner para evitar pérdida de recursos
         scanner.close();
     }
+
+    // Método para verificar si un número es entero
+    public static boolean esEntero(double numero) {
+        return numero % 1 == 0;
+    }
 }
+
